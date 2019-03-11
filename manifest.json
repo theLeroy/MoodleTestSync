@@ -1,12 +1,13 @@
 {
-  "name": "My Bookmarks",
+  "name": "Moodel",
   "version": "1.1",
-  "description": "A browser action with a popup dump of all bookmarks, including search, add, edit and delete.",
+  "description": "Nid zum spicke",
   "permissions": [
-    "bookmarks"
+    "activeTab",
+    "https://ajax.googleapis.com/"
   ],
   "browser_action": {
-      "default_title": "My Bookmarks",
+      "default_title": "Moodle Test Sync",
       "default_icon": "icon.png",
       "default_popup": "popup.html"
   },
