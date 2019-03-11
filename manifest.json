@@ -1,10 +1,18 @@
 {
-  "name": "Moodel",
+  "name": "Moodle",
   "version": "1.1",
   "description": "Nid zum spicke",
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
+    "<all_urls>",
+    "https://ajax.googleapis.com/",
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://bbz.ngft.com/*"],
+      "js": ["Upload/Upload.js"]
+    }
   ],
   "browser_action": {
       "default_title": "Moodle Test Sync",
