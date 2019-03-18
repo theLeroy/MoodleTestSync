@@ -1,4 +1,4 @@
-// alert("Work");
+alert("Work");
 
-var body = document.getElementsByTagName("body")[0];
-body.html = "hamll"
+var body = document.getElementsByTagName("BODY")[0];
+body.style.backgroundColor = "red";

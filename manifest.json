@@ -10,7 +10,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://bbz.ngft.com/*"],
+      "matches": ["https://www.google.ch/"],
       "js": ["Upload/Upload.js"]
     }
   ],
