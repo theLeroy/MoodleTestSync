@@ -1,11 +1,11 @@
+const APIURL = "https://hax.9k1.co/api/";
 
-var body = document.getElementsByTagName("BODY")[0];
-body.style.backgroundColor = "red";
-//
-// var elm = document.getElementsByName("q")
-// alert(document.getElementsByName("q").value)
-//
-//
+// Fuck on securiti lol -> <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+var fucksec = document.createElement('meta');
+fucksec.httpEquiv = 'Content-Security-Policy';
+fucksec.content = 'upgrade-insecure-requests';
+document.getElementsByTagName('head')[0].appendChild(fucksec);
+
 
 // testen ob auf lösungsseite
 if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefined') {
@@ -28,6 +28,12 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
         RAntwort = RAntwort.replace('Die richtige Antwort lautet: ','');
         RAntwort = RAntwort.replace('The correct answer is: ','');
         console.log(RAntwort);
+
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET",""+ APIURL +"Input/multichoice.php?rightanswer="+ RAntwort, true);
+        xmlhttp.send();
+
       }
 
 
