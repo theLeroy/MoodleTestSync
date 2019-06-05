@@ -21,7 +21,7 @@ if(!function_exists('env')) {
   $host = env("DB_HOST");
   $port = env("DB_PORT");
   $link = mysqli_init();
-  $success = mysqli_real_connect(
+  $conn = mysqli_real_connect(
      $link,
      $host,
      $user,
