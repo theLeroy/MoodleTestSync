@@ -20,9 +20,14 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
       //Loop all multibe choice
       for (var i = 0; i < (Object.keys(multichoiceQuestions).length)-1; i++) {
         //Select correct ones
-        if (Object.values(multichoiceQuestions[i].classList).indexOf('correct') > -1) {
-          console.log(multichoiceQuestions[i])
-        }
+        // if (Object.values(multichoiceQuestions[i].classList).indexOf('correct') > -1) {
+        //   console.log(multichoiceQuestions[i])
+        // }
+        //Richtige Antworten
+        let RAntwort = multichoiceQuestions[i].getElementsByClassName("rightanswer")[0].innerHTML;
+        RAntwort = RAntwort.replace('Die richtige Antwort lautet: ','');
+        RAntwort = RAntwort.replace('The correct answer is: ','');
+        console.log(RAntwort);
       }
 
 
