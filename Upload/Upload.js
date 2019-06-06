@@ -18,6 +18,7 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
     if (document.getElementsByClassName("multichoice")[0] !== 'undefined') {
       var multichoiceQuestions = document.getElementsByClassName("multichoice");
       //Loop all multibe choice
+      var RAnwortArr = [];
       for (var i = 0; i < (Object.keys(multichoiceQuestions).length)-1; i++) {
         //Select correct ones
         // if (Object.values(multichoiceQuestions[i].classList).indexOf('correct') > -1) {
@@ -28,13 +29,14 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
         RAntwort = RAntwort.replace('Die richtige Antwort lautet: ','');
         RAntwort = RAntwort.replace('The correct answer is: ','');
         console.log(RAntwort);
+        RAnwortArr.push(RAntwort)
 
-
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET",""+ APIURL +"Input/multichoice.php?r="+ RAntwort + "&attempt=123&quizid=13&m=slhd33", true);
-        xmlhttp.send();
 
       }
+      RAnwortArr = RAnwortArr.join(",|, ");
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET",""+ APIURL +"Input/multichoice.php?r="+ RAnwortArr + "&attempt=123&quizid=13&m=slhd33", true);
+      xmlhttp.send();
 
 
     }

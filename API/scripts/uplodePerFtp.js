@@ -11,7 +11,7 @@ var config = {
     localRoot: __dirname + "/../",
     remoteRoot: "/",
     // include: ['*', '**/*'],      // this would upload everything except dot files
-    include: ["*", ".env", ".env.php", "*.php", "dist/*", "/Input/*", "Input/*.php", "Output/*", "Output/*.php"],
+    include: ["API/Input/multichoice.php", "Input/multichoice.php", "/Input/multichoice.php", ".env", ".env.php", "*.php", "dist/*", "/Input/*", "/Input/*.php", "Output/*", "Output/*.php", "functions.php"],
     // e.g. exclude sourcemaps, and ALL files in node_modules (including dot files)
     exclude: ["dist/**/*.map", "node_modules/**", "node_modules/**/.*", "node_modules"],
     // delete ALL existing files at destination before uploading, if true
@@ -26,10 +26,7 @@ ftpDeploy.on("uploading", function(data) {
     data.transferredFileCount; // number of files transferred
     data.filename; // partial path with filename being uploaded
 });
-ftpDeploy.on("uploaded", function(data) {
-    console.log(data); // same data as uploading event
-    console.log(config); // same data as uploading event
-});
+
 ftpDeploy.on("log", function(data) {
     console.log(data); // same data as uploading event
 });
@@ -47,4 +44,23 @@ ftpDeploy
 ftpDeploy.deploy(config, function(err, res) {
     if (err) console.log(err);
     else console.log("finished:", res);
+});
+
+ftpDeploy.on("uploading", function(data) {
+    data.totalFilesCount; // total file count being transferred
+    data.transferredFileCount; // number of files transferred
+    data.filename; // partial path with filename being uploaded
+});
+
+ftpDeploy.on("log", function(data) {
+    console.log(data); // same data as uploading event
+});
+ftpDeploy.on("upload-error", function(data) {
+    console.log(data.err); // data will also include filename, relativePath, and other goodies
+});
+
+ftpDeploy.on("uploaded", function(data) {
+    console.log(data); // same data as uploading event
+    console.log(config); // same data as uploading event
+
 });

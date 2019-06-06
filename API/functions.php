@@ -12,7 +12,7 @@ if(!function_exists('env')) {
 }
 
 
-function conDb() {
+
 
 
 //DbConnect
@@ -32,15 +32,14 @@ function conDb() {
   //    $port
   // );
 
-  $conn = mysqli_connect($host, $user, $password, $user);
+  // $conn = mysqli_connect($host, $user, $password, $user);
 
-  if (!$conn) {
-      echo "Fehler: konnte nicht mit MySQL verbinden." . PHP_EOL;
-      echo "Debug-Fehlernummer: " . mysqli_connect_errno() . PHP_EOL;
-      echo "Debug-Fehlermeldung: " . mysqli_connect_error() . PHP_EOL;
-      exit;
-  }
+  // if (!$conn) {
+  //     echo "Fehler: konnte nicht mit MySQL verbinden." . PHP_EOL;
+  //     echo "Debug-Fehlernummer: " . mysqli_connect_errno() . PHP_EOL;
+  //     echo "Debug-Fehlermeldung: " . mysqli_connect_error() . PHP_EOL;
+  //     exit;
+  // }
 
-}
 
  ?>
