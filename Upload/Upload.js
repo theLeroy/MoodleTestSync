@@ -1,4 +1,5 @@
 const APIURL = "https://hax.9k1.co/api/";
+const NUMEROFCOLUMS = 19;
 
 // Fuck on securiti lol -> <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 var fucksec = document.createElement('meta');
@@ -84,26 +85,49 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
       if (document.getElementsByClassName("multichoice")[0] !== 'undefined') {
         var multichoiceQuestions = document.getElementsByClassName("multichoice");
 
-
+        //Ask db for solutions
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET",""+ APIURL +"Output/multichoice.php?quizid="+ cmid +"&m="+window.location.host+"", true);
         xhttp.send();
 
+        var dbResults;
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-            console.log(xhttp.responseText);
+            // convert Db Results to json
+          dbResults = JSON.parse(xhttp.responseText);
+          console.log(dbResults);
+            // Loop durch fragen und richtige antworten auswählen
+            for (var i = 0; i < (Object.keys(multichoiceQuestions).length); i++) {
+              let Question = multichoiceQuestions[i].getElementsByClassName("qtext")[0].getElementsByTagName("p")[0].textContent;
+
+              for (var q = 0; q < (Object.keys(dbResults).length); q++) {
+
+                for (var x = 1; x < NUMEROFCOLUMS+1; x++) {
+                  let vname = String("Solution_"+ x);
+                  // console.log(dbResults[q].Solution_1);
+                  // console.log(JSON.parse(dbResults[q].Solution_1));
+
+                  let AnserObj = JSON.parse(dbResults[q].x);
+                  console.log(AnserObj.Frage)
+                  console.log(Question)
+                  if (Question == AnserObj.Frage) {
+
+                  }
+
+                  function SlectLoesung() {
+
+                  }
+                }
+              }
+          }
+
           }
         }
 
 
 
 
-
-        for (var i = 0; i < (Object.keys(multichoiceQuestions).length); i++) {
-        }
       }
-
-
     }
   }
 }
