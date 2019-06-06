@@ -13,6 +13,14 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
     //Auf lösungsseite!
     console.log("finish atemp detect")
 
+    //get URL Parm
+    var param = {};
+    var s = window.location.search.substring(1).split('&');
+    for (var i = 0; i < s.length; ++i) {
+        var parts = s[i].split('=');
+        param[parts[0]] = parts[1];
+    }
+
   //Suche nach richtigen Lösungen:
     //multichoice!
     if (document.getElementsByClassName("multichoice")[0] !== 'undefined') {
@@ -29,13 +37,21 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
         RAntwort = RAntwort.replace('Die richtige Antwort lautet: ','');
         RAntwort = RAntwort.replace('The correct answer is: ','');
         console.log(RAntwort);
-        RAnwortArr.push(RAntwort)
 
+        //Frage
+        let Question = multichoiceQuestions[i].getElementsByClassName("qtext")[0].getElementsByTagName("p")[0].innerHTML;
+
+        let QObject = {
+          Frage:  Question,
+          Antwort: RAntwort
+        }
+        //Push in soll
+        RAnwortArr.push(JSON.stringify(QObject)  )
 
       }
-      RAnwortArr = RAnwortArr.join(",|, ");
+      RAnwortArr = RAnwortArr.join("*|* ");
       var xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("GET",""+ APIURL +"Input/multichoice.php?r="+ RAnwortArr + "&attempt=123&quizid=13&m=slhd33", true);
+      xmlhttp.open("GET",""+ APIURL +"Input/multichoice.php?r="+ RAnwortArr + "&attempt="+param.attempt+"&quizid="+param.cmid+"&m="+window.location.host+"", true);
       xmlhttp.send();
 
 

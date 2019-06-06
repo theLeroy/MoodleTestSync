@@ -15,8 +15,8 @@ $moodleumgebung = mysqli_real_escape_string($conn, $_GET["m"]);
 $resultsObject = mysqli_real_escape_string($conn, $_GET["r"]);
 
 
-$resultsObject = explode(',|, ', $resultsObject);
-array_push($resultsObject, "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL");
+$resultsObject = explode('*|* ', $resultsObject);
+array_push($resultsObject, "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL");
 
 //Lol Bigest slq ever
 // $sql = "
@@ -91,9 +91,7 @@ VALUES
   '$resultsObject[16]',
   '$resultsObject[17]',
   '$resultsObject[18]'
-
       )
-
 ";
 
 
