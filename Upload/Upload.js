@@ -31,7 +31,7 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
 
 
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET",""+ APIURL +"Input/multichoice.php?rightanswer="+ RAntwort, true);
+        xmlhttp.open("GET",""+ APIURL +"Input/multichoice.php?r="+ RAntwort + "&attempt=123&quizid=13&m=slhd33", true);
         xmlhttp.send();
 
       }

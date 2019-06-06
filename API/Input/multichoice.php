@@ -5,10 +5,10 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$attempt = mysql_real_escape_string($_GET["attempt"])
-$quizid = mysql_real_escape_string($_GET["quizid"])
-$moodleumgebung = mysql_real_escape_string($_GET["m"])
-$resultsObject = mysql_real_escape_string($_GET["r"])
+$attempt = mysql_real_escape_string($_GET["attempt"]);
+$quizid = mysql_real_escape_string($_GET["quizid"]);
+$moodleumgebung = mysql_real_escape_string($_GET["m"]);
+$resultsObject = mysql_real_escape_string($_GET["r"]);
 
 
 
