@@ -94,6 +94,7 @@ VALUES
       )
 ";
 
+print_r($resultsObject);
 
 if (mysqli_query($conn, $sql)) {
 
