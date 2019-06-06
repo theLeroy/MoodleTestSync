@@ -13,7 +13,7 @@ $resultsObject = mysql_real_escape_string($_GET["r"])
 
 
 
-
+//Lol Bigest slq ever
 $sql = "
 SET @pre = Solution_;
 SET @i = 0;

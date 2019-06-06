@@ -1,3 +1,4 @@
 .DS_Store
 .env.php
 node_modules
+API/.env

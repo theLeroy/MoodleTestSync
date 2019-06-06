@@ -1,0 +1,32 @@
+{
+  "name": "moodlehaxapi",
+  "version": "0.0.9",
+  "description": "Nice hax Api for moodle test. Better be smart :)",
+  "main": "index.js",
+  "scripts": {
+    "upload": "node scripts/uplodePerFtp.js",
+    "deploy": "node deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theLeroy/MoodleTestSync.git"
+  },
+  "keywords": [
+    "moodle",
+    "hack",
+    "test"
+  ],
+  "author": "theLeroy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theLeroy/MoodleTestSync/issues"
+  },
+  "homepage": "https://github.com/theLeroy/MoodleTestSync#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "ftp": "^0.3.10"
+  },
+  "devDependencies": {
+    "ftp-deploy": "^2.3.3"
+  }
+}
