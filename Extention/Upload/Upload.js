@@ -1,6 +1,8 @@
 const APIURL = "https://hax.9k1.co/api/";
 const NUMEROFCOLUMS = 19;
 
+
+
 // Fuck on securiti lol -> <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 var fucksec = document.createElement('meta');
 fucksec.httpEquiv = 'Content-Security-Policy';
@@ -98,35 +100,36 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
           console.log(dbResults);
             // Loop durch fragen und richtige antworten auswählen
             for (var i = 0; i < (Object.keys(multichoiceQuestions).length); i++) {
-              let Question = multichoiceQuestions[i].getElementsByClassName("qtext")[0].getElementsByTagName("p")[0].textContent;
+              let QCont = multichoiceQuestions[i].getElementsByClassName("qtext")[0]
+              let Question = QCont.getElementsByTagName("p")[0].textContent;
 
               for (var q = 0; q < (Object.keys(dbResults).length); q++) {
 
                 for (var x = 1; x < NUMEROFCOLUMS+1; x++) {
 
-                  // console.log(dbResults[q].Solution_1);
-                  // console.log(JSON.parse(dbResults[q].Solution_1));
-
-                  let AnserObj = JSON.parse(dbResults[q]["Solution_" + x]);
-                  console.log(AnserObj.Frage)
-                  console.log(Question)
-                  if (Question == AnserObj.Frage) {
-                    alert("richtige lösung gefunden! ")
+                  if(dbResults[q]["Solution_" + x] != "NULL") {
+                    var AnserObj = JSON.parse(dbResults[q]["Solution_" + x]);
+                  } else {
+                    var AnserObj = {};
                   }
+                  //Test if Web Frage und Db Frage same
+                  if (Question = AnserObj.Frage) {
+                    //Loop throug awersers.
+                    for (var a = 0; a < multichoiceQuestions[i].getElementsByTagName("label").length; a++) {
 
-                  function SlectLoesung() {
-
+                      let antser = multichoiceQuestions[i].getElementsByTagName("label")[a].textContent;
+                      if (antser.length > 3) {antser = antser.substring(3)};
+                      if (antser ===  AnserObj.Antwort) {
+                        //Add css to correct anser
+                        multichoiceQuestions[i].getElementsByTagName("label")[a].style.color = 'blue';
+                      }
+                    }
                   }
                 }
               }
-          }
-
+            }
           }
         }
-
-
-
-
       }
     }
   }
