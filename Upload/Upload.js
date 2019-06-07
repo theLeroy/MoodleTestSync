@@ -103,15 +103,15 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
               for (var q = 0; q < (Object.keys(dbResults).length); q++) {
 
                 for (var x = 1; x < NUMEROFCOLUMS+1; x++) {
-                  let vname = String("Solution_"+ x);
+
                   // console.log(dbResults[q].Solution_1);
                   // console.log(JSON.parse(dbResults[q].Solution_1));
 
-                  let AnserObj = JSON.parse(dbResults[q].x);
+                  let AnserObj = JSON.parse(dbResults[q]["Solution_" + x]);
                   console.log(AnserObj.Frage)
                   console.log(Question)
                   if (Question == AnserObj.Frage) {
-
+                    alert("richtige lösung gefunden! ")
                   }
 
                   function SlectLoesung() {
