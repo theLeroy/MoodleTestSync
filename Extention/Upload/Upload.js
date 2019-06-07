@@ -2,7 +2,6 @@ const APIURL = "https://hax.9k1.co/api/";
 const NUMEROFCOLUMS = 19;
 
 
-
 // Fuck on securiti lol -> <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 var fucksec = document.createElement('meta');
 fucksec.httpEquiv = 'Content-Security-Policy';
@@ -121,7 +120,8 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
                       if (antser.length > 3) {antser = antser.substring(3)};
                       if (antser ===  AnserObj.Antwort) {
                         //Add css to correct anser
-                        multichoiceQuestions[i].getElementsByTagName("label")[a].style.color = 'blue';
+                        multichoiceQuestions[i].getElementsByTagName("label")[a].classList.add('correctsolHoverLOLoiu2g323j4g2o874t32g4324')
+                        // multichoiceQuestions[i].getElementsByTagName("label")[a].style.color = 'blue';
                       }
                     }
                   }

@@ -1,0 +1,9 @@
+.correctsolHoverLOLoiu2g323j4g2o874t32g4324:hover {
+  color: green;
+  text-decoration: underline;
+  font-weight: bold;
+
+}
+.correctsolHoverLOLoiu2g323j4g2o874t32g4324:hover::after {
+    content: ' <-- 100% sure';
+}
