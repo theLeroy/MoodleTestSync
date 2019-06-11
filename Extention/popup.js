@@ -13,6 +13,8 @@ chrome.runtime.onMessage.addListener(
       var data = JSON.parse(request.event_solfound);
       console.log(data)
 
+    
+      addRow("AntwortenTable", ["data", "wie", "geiz?"]);
 
     }
   });
