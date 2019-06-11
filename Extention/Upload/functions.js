@@ -24,7 +24,7 @@ function editDistance(s1, s2) {
   }
   return costs[s2.length];
 }
-
+//Get similarity of String in %
 function similarity(s1, s2) {
   var longer = s1;
   var shorter = s2;
@@ -37,4 +37,11 @@ function similarity(s1, s2) {
     return 1.0;
   }
   return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
+}
+
+// Transmit Functin to Popup
+function SendToPopup(eventname, Data) {
+  chrome.runtime.sendMessage({eventname: Data}, function(response) {
+    console.log(response.farewell);
+  });
 }

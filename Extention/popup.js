@@ -6,6 +6,7 @@ chrome.runtime.onMessage.addListener(
                 "from the extension");
     if (request.event_solfound !== "") {
       document.getElementsByClassName("SolsFound")[0].classList.add('noHide');
+      document.getElementsByClassName("noSols")[0].classList.add('Hide');
       sendResponse({farewell: "event_solfound_recived"});
     }
   });

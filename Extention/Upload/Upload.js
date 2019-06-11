@@ -1,6 +1,6 @@
-chrome.runtime.sendMessage({event_solfound: "event_solfound"}, function(response) {
-  console.log(response.farewell);
-});
+
+// Transmit Functin to Popup
+// SendToPopup("event_solfound", "event_solfound")
 
 const APIURL = "https://hax.9k1.co/api/";
 const NUMEROFCOLUMS = 19;

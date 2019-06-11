@@ -1,6 +1,9 @@
 .noHide {
   display: block !important;
 }
+.Hide {
+  display: none !important;
+}
 
 h1 {
   font-size: 22px;
@@ -53,8 +56,6 @@ th {
 table {
   width: 100%;
 }
-
-
 
 
 /* no sols found  */
