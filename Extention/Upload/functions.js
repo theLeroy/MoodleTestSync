@@ -41,7 +41,16 @@ function similarity(s1, s2) {
 
 // Transmit Functin to Popup
 function SendToPopup(eventname, Data) {
-  chrome.runtime.sendMessage({eventname: Data}, function(response) {
+  chrome.runtime.sendMessage({[eventname]: Data}, function(response) {
     console.log(response.farewell);
   });
 }
+
+//Rm "NULL" form object
+const removeEmpty = (obj) => {
+  Object.keys(obj).forEach(key =>
+    (obj[key] && typeof obj[key] === 'object') && removeEmpty(obj[key]) ||
+    (obj[key] === undefined || obj[key] === "NULL") && delete obj[key]
+  );
+  return obj;
+};
