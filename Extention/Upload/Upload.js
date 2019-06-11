@@ -100,10 +100,10 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
           if (this.readyState == 4 && this.status == 200) {
             // convert Db Results to json
           dbResults = JSON.parse(xhttp.responseText);
-          dbResults = removeEmpty(dbResults);
+          let removeEmptydbResults = removeEmpty(dbResults);
           console.log(dbResults);
           //Transmit Data to popup
-          SendToPopup("event_solfound", JSON.stringify(dbResults));
+          SendToPopup("event_solfound", JSON.stringify(removeEmptydbResults));
 
             // Loop durch fragen und richtige antworten auswählen
             for (var i = 0; i < (Object.keys(multichoiceQuestions).length); i++) {
@@ -112,7 +112,7 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
 
               for (var q = 0; q < (Object.keys(dbResults).length); q++) {
 
-                for (var x = 1; x < dbResults[q].length; x++) {
+                for (var x = 1; x < NUMEROFCOLUMS+1; x++) {
 
                   if(dbResults[q]["Solution_" + x] != "NULL") {
                     var AnserObj = JSON.parse(dbResults[q]["Solution_" + x]);

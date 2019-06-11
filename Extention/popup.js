@@ -13,8 +13,15 @@ chrome.runtime.onMessage.addListener(
       var data = JSON.parse(request.event_solfound);
       console.log(data)
 
-    
-      addRow("AntwortenTable", ["data", "wie", "geiz?"]);
-
+      for (var q = 0; q < (Object.keys(data).length); q++) {
+        for (var x = 1; x < (Object.keys(data[q]).length); x++) {
+          if(data[q]["Solution_" + x] != "NULL") {
+            var AnserObj = JSON.parse(data[q]["Solution_" + x]);
+          } else {
+            var AnserObj = {};
+          }
+            addRow("AntwortenTable", ["100%", AnserObj.Antwort, AnserObj.Frage]);
+        }
+      }
     }
   });
