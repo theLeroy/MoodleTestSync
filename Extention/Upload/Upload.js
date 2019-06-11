@@ -1,3 +1,7 @@
+chrome.runtime.sendMessage({event_solfound: "event_solfound"}, function(response) {
+  console.log(response.farewell);
+});
+
 const APIURL = "https://hax.9k1.co/api/";
 const NUMEROFCOLUMS = 19;
 

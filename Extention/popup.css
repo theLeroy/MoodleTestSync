@@ -1,0 +1,35 @@
+.noHide {
+  display: block !important;
+}
+
+
+.SolsFound {
+  /* display: none; */
+  margin-top: 60px;
+}
+.SolsFound > svg {
+  width: 75px;
+  margin-left: calc(50% - 37.5px);
+  fill: #9bd782;
+}
+.SolsFound > h1 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #9bd782;
+}
+.SolsFound > p {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+table,
+td,
+th {
+	border: 1px solid black;
+}
+table {
+  width: 100%;
+}

@@ -1,9 +1,38 @@
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <script src="popup.js"></script>
+  <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body style="width: 400px">
-  <button type="button" name="button">  Upload Solutions</button>
-  <button type="button" name="button">  Search for Solutions</button>
+  <div class="noSols">
+
+  </div>
+  <!-- Wen lösung gefunden  -->
+  <div class="SolsFound">
+    <?xml version="1.0" encoding="iso-8859-1"?><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path d="M437.019,74.98C388.667,26.629,324.38,0,256,0C187.619,0,123.332,26.629,74.98,74.98C26.629,123.332,0,187.62,0,256s26.629,132.667,74.98,181.019C123.332,485.371,187.62,512,256,512s132.667-26.629,181.019-74.98C485.371,388.667,512,324.38,512,256S485.371,123.333,437.019,74.98z M378.306,195.073L235.241,338.139c-2.929,2.929-6.768,4.393-10.606,4.393c-3.839,0-7.678-1.464-10.607-4.393l-80.334-80.333c-5.858-5.857-5.858-15.354,0-21.213c5.857-5.858,15.355-5.858,21.213,0l69.728,69.727l132.458-132.46c5.857-5.858,15.355-5.858,21.213,0C384.164,179.718,384.164,189.215,378.306,195.073z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+    <h1>Es wurden Lösungen gefunden!</h1>
+    <p>Wir haben lösungen gefunden und haben dies in die Webeiseite eingefügt. Du siehst die richtige Antwort wenn du über die Frage hoverst.</p>
+    <div class="lösungscontainer">
+      <table>
+        <tr>
+          <th>Frage:</th>
+          <th>Antwort:</th>
+          <th>Sicher?</th>
+        </tr>
+        <tr>
+          <td>sdd</td>
+          <td>Kiez</td>
+          <td>100%</td>
+         </tr>
+       <tr>
+         <td>Buletten</td>
+         <td>Frikadellen</td>
+         <td>100%</td>
+       </tr>
+    </table>
+    </div>
+  </div>
 </body>
+
 </html>
