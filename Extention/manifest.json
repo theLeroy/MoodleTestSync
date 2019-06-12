@@ -9,7 +9,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://school.demo.moodle.net/*", "https://bbz.ngft.com/*", "*.ngft.com/*", "moodlecloud.com/*", "*.moodlecloud.com/*", "https://moodle.bfh.ch/*", "https://moodle.fhnw.ch/*", "*", "*/*", "*.*/*", "all", "http://*", "https://*"],
+      "matches": ["https://school.demo.moodle.net/*", "https://bbz.ngft.com/*", "http://*/*", "https://*/*", "<all_urls>"],
       "js": ["Upload/functions.js", "Upload/Upload.js"],
       "css": ["Upload/Content.css"]
     }
