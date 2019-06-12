@@ -3,26 +3,10 @@
 
 
 
-
-
-
-
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better please fork the repo and create a pull request or simple open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-
-
 <!-- PROJECT SHIELDS -->
 [![Build Status][build-shield]]()
 [![Contributors][contributors-shield]]()
 [![MIT License][license-shield]][license-url]
-[![GitHub][GitHub-shield]][GitHub-url]
 
 
 
@@ -30,7 +14,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/theLeroy/MoodleTestSync">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="/Extention/icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Moodle Test synchroniser</h3>
@@ -77,6 +61,9 @@ Functions:
 
 At the moment the extension only works with english and german moodle versions. Please help me to offer the other languages as well.
 
+<br>
+<br>
+
 ------
 
 *Bitte nutz dies nur für Bildungszwecke. Von dem benutzen auf Unterrichtsseiten ist abzuraten.*
@@ -115,7 +102,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-###To Do
+### To Do
 * Support for dropdowns
 * Chat functions
 * Clean code
