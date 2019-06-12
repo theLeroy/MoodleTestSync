@@ -42,7 +42,7 @@ function similarity(s1, s2) {
 // Transmit Functin to Popup
 function SendToPopup(eventname, Data) {
   chrome.runtime.sendMessage({[eventname]: Data}, function(response) {
-    console.log(response.farewell);
+    // console.log(response.farewell);
   });
 }
 

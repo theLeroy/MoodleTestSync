@@ -70,7 +70,7 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
 }
 
 
-
+var FnFillTest = () => {
 //Am ausfüllen vom Quiz
 if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
   let path = window.location.pathname;
@@ -144,3 +144,18 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
     }
   }
 }
+};
+FnFillTest();
+
+
+//Tringer relode
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    console.log(sender.tab ?
+                "from a content script:" + sender.tab.url :
+                "from the extension");
+    if (request.relode !== "") {
+      FnFillTest();
+      sendResponse({relode: "Relode done!"});
+    }
+  });
