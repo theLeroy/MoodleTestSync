@@ -115,7 +115,7 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
 
                 for (var x = 1; x < NUMEROFCOLUMS+1; x++) {
                   if (typeof dbResults[q]["Solution_" + x] !== 'undefined') {
-                    if(dbResults[q]["Solution_" + x] != "NULL") {
+                    if(dbResults[q]["Solution_" + x] !== "NULL") {
                       var AnserObj = JSON.parse(dbResults[q]["Solution_" + x]);
                     } else {
                       var AnserObj = {};

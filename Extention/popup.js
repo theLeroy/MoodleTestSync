@@ -1,3 +1,6 @@
+const NUMEROFCOLUMS = 19;
+
+
 //Alert if solution is found
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -13,14 +16,23 @@ chrome.runtime.onMessage.addListener(
       var data = JSON.parse(request.event_solfound);
       console.log(data)
 
+      var AnserObj;
       for (var q = 0; q < (Object.keys(data).length); q++) {
-        for (var x = 1; x < (Object.keys(data[q]).length); x++) {
-          if(data[q]["Solution_" + x] != "NULL") {
-            var AnserObj = JSON.parse(data[q]["Solution_" + x]);
+        for (var x = 1; x < NUMEROFCOLUMS+1; x++) {
+          if (typeof data[q]["Solution_" + x] !== 'undefined') {
+            if(data[q]["Solution_" + x] !== "NULL") {
+              AnserObj = JSON.parse(data[q]["Solution_" + x]);
+              data[q]["Solution_" + x] = AnserObj;
+
+            } else {
+              AnserObj = null;
+            }
           } else {
-            var AnserObj = {};
+            AnserObj = null;
           }
-            addRow("AntwortenTable", ["100%", AnserObj.Antwort, AnserObj.Frage]);
+            if (AnserObj !== null) {
+              addRow("AntwortenTable", ["100%", AnserObj.Antwort, AnserObj.Frage]);
+            }
         }
       }
     }

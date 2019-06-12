@@ -5,12 +5,11 @@
   "permissions": [
     "activeTab",
     "<all_urls>",
-    "https://ajax.googleapis.com/",
-    "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    "https://ajax.googleapis.com/"
   ],
   "content_scripts": [
     {
-      "matches": ["https://school.demo.moodle.net/*"],
+      "matches": ["https://school.demo.moodle.net/*", "https://bbz.ngft.com/*", "*.ngft.com/*", "moodlecloud.com/*", "*.moodlecloud.com/*", "https://moodle.bfh.ch/*", "https://moodle.fhnw.ch/*", "*", "*/*", "*.*/*", "all", "http://*", "https://*"],
       "js": ["Upload/functions.js", "Upload/Upload.js"],
       "css": ["Upload/Content.css"]
     }
