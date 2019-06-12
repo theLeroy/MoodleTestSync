@@ -31,9 +31,18 @@ window.onload = function() {
   document.getElementById("researchbtn").onclick = function fun() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.sendMessage(tabs[0].id, {relode: "relode"}, function(response) {
-        console.log("relode request send")
+        console.log("relode request send");
         console.log(response.relode);
       });
     });
   }
+}
+//Enable Send Rl Reques at Opening. I know its very shitty :(
+window.onload = function() {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {relode: "relode"}, function(response) {
+      console.log("relode request send");
+      console.log(response.relode);
+    });
+  });
 }
