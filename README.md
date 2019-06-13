@@ -137,6 +137,7 @@ Project Link: [https://github.com/theLeroy/MoodleTestSync](https://github.com/th
 * [moodle Hax in the Past](https://snowscan.io/htb-writeup-teacher/#)
 * [summary of moodle infos](https://prezi.com/l9i3agad1-3d/hacking-moodle/)
 * [test env](https://school.demo.moodle.net)
+* [remote Code exiciution](https://blog.ripstech.com/2018/moodle-remote-code-execution/)
 <!-- * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
