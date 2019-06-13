@@ -16,7 +16,7 @@ $resultsObject = mysqli_real_escape_string($conn, $_GET["r"]);
 
 
 $resultsObject = explode('*|* ', $resultsObject);
-array_push($resultsObject, "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL");
+array_push($resultsObject, "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL");
 
 //Lol Bigest slq ever
 // $sql = "
@@ -65,7 +65,28 @@ INSERT INTO
     Solution_16,
     Solution_17,
     Solution_18,
-    Solution_19
+    Solution_19,
+    Solution_20,
+    Solution_21,
+    Solution_22,
+    Solution_23,
+    Solution_24,
+    Solution_25,
+    Solution_26,
+    Solution_27,
+    Solution_28,
+    Solution_29,
+    Solution_30,
+    Solution_31,
+    Solution_32,
+    Solution_33,
+    Solution_34,
+    Solution_35,
+    Solution_36,
+    Solution_37,
+    Solution_38,
+    Solution_39,
+    Solution_40
        )
 VALUES
  (
@@ -90,7 +111,28 @@ VALUES
   '$resultsObject[15]',
   '$resultsObject[16]',
   '$resultsObject[17]',
-  '$resultsObject[18]'
+  '$resultsObject[18]',
+  '$resultsObject[19]',
+  '$resultsObject[20]',
+  '$resultsObject[21]',
+  '$resultsObject[22]',
+  '$resultsObject[23]',
+  '$resultsObject[24]',
+  '$resultsObject[25]',
+  '$resultsObject[26]',
+  '$resultsObject[27]',
+  '$resultsObject[28]',
+  '$resultsObject[29]',
+  '$resultsObject[30]',
+  '$resultsObject[31]',
+  '$resultsObject[32]',
+  '$resultsObject[33]',
+  '$resultsObject[34]',
+  '$resultsObject[35]',
+  '$resultsObject[36]',
+  '$resultsObject[37]',
+  '$resultsObject[38]',
+  '$resultsObject[39]'
       )
 ";
 

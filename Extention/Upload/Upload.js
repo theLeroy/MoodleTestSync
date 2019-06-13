@@ -3,7 +3,7 @@
 // SendToPopup("event_solfound", "event_solfound")
 
 const APIURL = "https://hax.9k1.co/api/";
-const NUMEROFCOLUMS = 19;
+const NUMEROFCOLUMS = 40; //Ammount of rows in Db
 
 
 // Fuck on securiti lol -> <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
