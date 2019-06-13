@@ -20,7 +20,7 @@
   <h3 align="center">Moodle Test synchroniser</h3>
 
   <p align="center">
-    Chrome extension that solves Moodle Test or makes it easyer.
+    Chrome extension that solves Moodle Test / Exams or makes it easyer.
     <br />
     <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -44,7 +44,7 @@
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [Interesting Links](#intresting-links)
 
 
 
@@ -84,13 +84,18 @@ Ruff Js and an Api with php and mysqli
 
 ## Installation
 
-Coming soon
+Very Quick installation!
+  1. Go to Releases and download the crx file. -> [https://github.com/theLeroy/MoodleTestSync/releases](https://github.com/theLeroy/MoodleTestSync/releases)
+  2. Drag and Drop the File into chrome.
+  3. Press Ok
+  4. Finish
 
 
 
 
 ## Usage
 
+Coming soon. WIP!
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
@@ -128,7 +133,11 @@ Project Link: [https://github.com/theLeroy/MoodleTestSync](https://github.com/th
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## Intresting Links
+* [moodle Hax in the Past](https://snowscan.io/htb-writeup-teacher/#)
+* [summary of moodle infos](https://prezi.com/l9i3agad1-3d/hacking-moodle/)
+* [test env](https://school.demo.moodle.net)
+* [remote Code exiciution](https://blog.ripstech.com/2018/moodle-remote-code-execution/)
 <!-- * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
