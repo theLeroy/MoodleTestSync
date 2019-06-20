@@ -71,67 +71,68 @@ if (typeof document.getElementsByClassName("quizreviewsummary")[0] !== 'undefine
 
 
 var FnFillTest = () => {
-//Am ausfüllen vom Quiz
-if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
-  let path = window.location.pathname;
-  if (path.substring(path.length - 11, path.length) == "attempt.php") {
-    var param = {};
-      var s = window.location.search.substring(1).split('&');
-      for (var i = 0; i < s.length; ++i) {
-          var parts = s[i].split('=');
-          param[parts[0]] = parts[1];
+  //Am ausfüllen vom Quiz
+  if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
+    let path = window.location.pathname;
+    if (path.substring(path.length - 11, path.length) == "attempt.php") {
+      var param = {};
+        var s = window.location.search.substring(1).split('&');
+        for (var i = 0; i < s.length; ++i) {
+            var parts = s[i].split('=');
+            param[parts[0]] = parts[1];
+        }
+      if (typeof param.cmid !== 'undefined') {
+        var cmid = param.cmid;
       }
-    if (typeof param.cmid !== 'undefined') {
-      var cmid = param.cmid;
-    }
-    if(param.cmid = Number) {
-      console.log("on Quiz page!");
+      if(param.cmid = Number) {
+        console.log("on Quiz page!");
 
-      if (document.getElementsByClassName("multichoice")[0] !== 'undefined') {
-        var multichoiceQuestions = document.getElementsByClassName("multichoice");
+        if (document.getElementsByClassName("multichoice")[0] !== 'undefined') {
+          var multichoiceQuestions = document.getElementsByClassName("multichoice");
 
-        //Ask db for solutions
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET",""+ APIURL +"Output/multichoice.php?quizid="+ cmid +"&m="+window.location.host+"", true);
-        xhttp.send();
+          //Ask db for solutions
+          var xhttp = new XMLHttpRequest();
+          xhttp.open("GET",""+ APIURL +"Output/multichoice.php?quizid="+ cmid +"&m="+window.location.host+"", true);
+          xhttp.send();
 
-        var dbResults;
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            // convert Db Results to json
-          dbResults = JSON.parse(xhttp.responseText);
-          //bad sytax i know
-          dbResults = removeEmpty(dbResults);
-          console.log(dbResults);
-          //Transmit Data to popup
-          SendToPopup("event_solfound", JSON.stringify(dbResults));
+          var dbResults;
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              // convert Db Results to json
+            dbResults = JSON.parse(xhttp.responseText);
+            //bad sytax i know
+            dbResults = removeEmpty(dbResults);
+            console.log(dbResults);
+            //Transmit Data to popup
+            SendToPopup("event_solfound", JSON.stringify(dbResults));
 
-            // Loop durch fragen und richtige antworten auswählen
-            for (var i = 0; i < (Object.keys(multichoiceQuestions).length); i++) {
-              let QCont = multichoiceQuestions[i].getElementsByClassName("qtext")[0]
-              let Question = QCont.getElementsByTagName("p")[0].textContent;
+              // Loop durch fragen und richtige antworten auswählen
+              for (var i = 0; i < (Object.keys(multichoiceQuestions).length); i++) {
+                let QCont = multichoiceQuestions[i].getElementsByClassName("qtext")[0]
+                let Question = QCont.getElementsByTagName("p")[0].textContent;
 
-              for (var q = 0; q < (Object.keys(dbResults).length); q++) {
+                for (var q = 0; q < (Object.keys(dbResults).length); q++) {
 
-                for (var x = 1; x < NUMEROFCOLUMS+1; x++) {
-                  if (typeof dbResults[q]["Solution_" + x] !== 'undefined') {
-                    if(dbResults[q]["Solution_" + x] !== "NULL") {
-                      var AnserObj = JSON.parse(dbResults[q]["Solution_" + x]);
-                    } else {
-                      var AnserObj = {};
+                  for (var x = 1; x < NUMEROFCOLUMS+1; x++) {
+                    if (typeof dbResults[q]["Solution_" + x] !== 'undefined') {
+                      if(dbResults[q]["Solution_" + x] !== "NULL") {
+                        var AnserObj = JSON.parse(dbResults[q]["Solution_" + x]);
+                      } else {
+                        var AnserObj = {};
+                      }
                     }
-                  }
-                  //Test if Web Frage und Db Frage same
-                  if (Question = AnserObj.Frage) {
-                    //Loop throug awersers.
-                    for (var a = 0; a < multichoiceQuestions[i].getElementsByTagName("label").length; a++) {
+                    //Test if Web Frage und Db Frage same
+                    if (Question = AnserObj.Frage) {
+                      //Loop throug awersers.
+                      for (var a = 0; a < multichoiceQuestions[i].getElementsByTagName("label").length; a++) {
 
-                      let antser = multichoiceQuestions[i].getElementsByTagName("label")[a].textContent;
-                      if (antser.length > 3) {antser = antser.substring(3)};
-                      if (antser ===  AnserObj.Antwort) {
-                        //Add css to correct anser
-                        multichoiceQuestions[i].getElementsByTagName("label")[a].classList.add('correctsolHoverLOLoiu2g323j4g2o874t32g4324')
-                        // multichoiceQuestions[i].getElementsByTagName("label")[a].style.color = 'blue';
+                        let antser = multichoiceQuestions[i].getElementsByTagName("label")[a].textContent;
+                        if (antser.length > 3) {antser = antser.substring(3)};
+                        if (antser ===  AnserObj.Antwort) {
+                          //Add css to correct anser
+                          multichoiceQuestions[i].getElementsByTagName("label")[a].classList.add('correctsolHoverLOLoiu2g323j4g2o874t32g4324')
+                          // multichoiceQuestions[i].getElementsByTagName("label")[a].style.color = 'blue';
+                        }
                       }
                     }
                   }
@@ -143,7 +144,6 @@ if (typeof document.getElementById("mod_quiz_navblock_title") !== 'undefined') {
       }
     }
   }
-}
 };
 FnFillTest();
 
