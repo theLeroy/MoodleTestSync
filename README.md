@@ -63,6 +63,8 @@ At the moment the extension only works with english and german moodle versions. 
 
 <br>
 <br>
+<br>
+**This is 100% leagal by law. It does not penetrate or do anthing ileagl.**
 
 ------
 
