@@ -68,9 +68,9 @@ At the moment the extension only works with english and german moodle versions. 
 
 ------
 
-*Bitte nutz dies nur für Bildungszwecke. Von dem benutzen auf Unterrichtsseiten ist abzuraten.*
+*Please use this only for educational purposes. It is not advisable to use it on teaching sites. :)*
 
-*Please use this only for educational purposes. It is not advisable to use it on teaching sites.*
+*Bitte nutz dies nur für Bildungszwecke. Von dem benutzen auf Unterrichtsseiten ist abzuraten.:)*
 
 *Veuillez ne l'utiliser qu'à des fins éducatives. Il n'est pas conseillé de l'utiliser sur des sites d'enseignement.*
 
