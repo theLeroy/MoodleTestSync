@@ -154,4 +154,4 @@ Project Link: [https://github.com/theLeroy/MoodleTestSync](https://github.com/th
 [product-screenshot]: https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/screenshot.png
 
 
-Nütz nid tchance nütz zystem. Better be smart :)
+Nütz nid tchance nütz zystem. Better be smart! :)
