@@ -54,3 +54,17 @@ const removeEmpty = (obj) => {
   );
   return obj;
 };
+
+
+function AddChatIcon() {
+  let question = document.getElementsByClassName("deferredfeedback")
+  for (var i = 0; i < question.length; i++) {
+    let questionc = question[i].getElementsByClassName("formulation")[0]
+    let node = document.createElement("div")
+    node.innerHTML = "+"
+    node.classList.add('chatopenp98234klj23n4p283432kjb483b34')
+    node.id = 'chatid_' + question[i].id
+    questionc.appendChild(node);
+  }
+
+}

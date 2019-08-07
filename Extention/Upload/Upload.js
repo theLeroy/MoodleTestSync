@@ -148,6 +148,10 @@ var FnFillTest = () => {
 FnFillTest();
 
 
+AddChatIcon();
+
+
+
 //Tringer relode
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {

@@ -5,5 +5,18 @@
 
 }
 .correctsolHoverLOLoiu2g323j4g2o874t32g4324:hover::after {
-    content: ' <-- 100% sure';
+  content: ' <-- 100% sure';
+}
+
+.chatopenp98234klj23n4p283432kjb483b34 {
+  position: absolute;
+  right: 0px;
+  opacity: 0.5;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  /* background: red; */
+  padding-top: 9px;
+  font-size: 22px;
 }
