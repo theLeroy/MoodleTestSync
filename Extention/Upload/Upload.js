@@ -141,15 +141,32 @@ var FnFillTest = () => {
             }
           }
         }
+
+        //Ad chat opening icon
+        AddChatIcon();
+
+        //add Chat
+        for (var i = 0; i < document.getElementsByClassName("chatopenp98234klj23n4p283432kjb483b34").length; i++) {
+          document.getElementsByClassName("chatopenp98234klj23n4p283432kjb483b34")[i].addEventListener("click", (e) => {
+            openchat(e, i)
+          });
+        }
+
       }
     }
   }
 };
 FnFillTest();
 
+//generate chat and open it
+function openchat(e, i) {
+  var questionid = e.target.id
+  var chathtml = '<div class="chat"><div class="messages"><p class="start">Start of the conversation.</p></div><div class="typeline"><input type="text" class="chatinputtext" name="send" placeholder="Type here." required><input class="chatinputsend" type="submit"></div></div>'
+  var messagehtml = '<div class="message" id="messageid_"><p class="date"></p><p class="text"></p></div>'
+  document.getElementById(questionid).classList.add('chatisnowopen')
+  document.getElementById(questionid).innerHTML = chathtml
 
-AddChatIcon();
-
+}
 
 
 //Tringer relode

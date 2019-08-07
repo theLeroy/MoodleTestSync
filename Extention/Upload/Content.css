@@ -20,3 +20,58 @@
   padding-top: 9px;
   font-size: 22px;
 }
+
+
+/* if chat is open  */
+.chatisnowopen {
+  width: 400px;
+  border: 2px rgba(255, 92, 92, 0.87) solid;
+  height: 100%;
+  border-radius: 4px;
+}
+.chatisnowopen > .chat {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+}
+.chatisnowopen > .chat > .typeline {
+  bottom: 0px;
+  position: absolute;
+  height: 29px;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-bottom: 7px;
+}
+.chatisnowopen > .chat > .typeline > .chatinputtext {
+  height: 100%;
+  width: 80%;
+  outline: none;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-color: none;
+  border-width: 0px;
+  line-height: 18px;
+  font-size: 14px;
+  opacity: 0.9;
+  color: rgb(68, 66, 67);
+  background: #f9f9f9;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.chatisnowopen > .chat > .typeline > .chatinputsend {
+  background: #f9f9f9;
+  opacity: 0.9;
+  color: rgb(68, 66, 67);
+  height: 100%;
+  font-size: 14px;
+  width: 20%;
+  line-height: 18px;
+  outline: none;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  border-color: none;
+  border-width: 0px;
+}
+
+.chatisnowopen > .chat > .messages {}
