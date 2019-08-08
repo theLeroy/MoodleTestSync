@@ -11,7 +11,7 @@ var config = {
     localRoot: __dirname + "/../",
     remoteRoot: "/",
     // include: ['*', '**/*'],      // this would upload everything except dot files
-    include: ["API/Input/multichoice.php", "Input/multichoice.php", "/Input/multichoice.php", ".env", ".env.php", "*.php", "dist/*", "/Input/*", "/Input/*.php", "Output/*", "Output/*.php", "functions.php"],
+    include: ["API/Input/multichoice.php", "API/Input/chat.php", "Input/multichoice.php", "/Input/multichoice.php", ".env", ".env.php", "*.php", "dist/*", "/Input/*", "/Input/*.php", "Output/*", "Output/*.php", "functions.php"],
     // e.g. exclude sourcemaps, and ALL files in node_modules (including dot files)
     exclude: ["dist/**/*.map", "node_modules/**", "node_modules/**/.*", "node_modules"],
     // delete ALL existing files at destination before uploading, if true
