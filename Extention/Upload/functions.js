@@ -66,5 +66,4 @@ function AddChatIcon() {
     node.id = 'chatid_' + question[i].id
     questionc.appendChild(node);
   }
-
 }

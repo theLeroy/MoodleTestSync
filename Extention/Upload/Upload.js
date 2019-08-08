@@ -161,11 +161,16 @@ FnFillTest();
 //generate chat and open it
 function openchat(e, i) {
   var questionid = e.target.id
-  var chathtml = '<div class="chat"><div class="messages"><p class="start">Start of the conversation.</p></div><div class="typeline"><input type="text" class="chatinputtext" name="send" placeholder="Type here." required><input class="chatinputsend" type="submit"></div></div>'
+  var chathtml = '<div class="chat"><div class="messages"><p class="start">Start of the conversation.</p></div><div class="typeline"><form onsubmit="sendChatMS(e)" method="get"><input type="text" class="chatinputtext" value="" name="sendNachtichttobend" placeholder="Type here." novalidate><input class="chatinputsend" type="submit"></form></div></div>'
   var messagehtml = '<div class="message" id="messageid_"><p class="date"></p><p class="text"></p></div>'
   document.getElementById(questionid).classList.add('chatisnowopen')
   document.getElementById(questionid).innerHTML = chathtml
 
+}
+
+function sendChatMS(e) {
+  alert()
+  console.log(e)
 }
 
 
