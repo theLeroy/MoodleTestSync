@@ -3,7 +3,7 @@
   "private": true,
   "description": "Moodle",
   "devDependencies": {
-    "async": "1.5.2",
+    "async": "2.6.4",
     "eslint": "4.18.2",
     "eslint-plugin-promise": "3.5.0",
     "gherkin-lint": "1.1.3",
